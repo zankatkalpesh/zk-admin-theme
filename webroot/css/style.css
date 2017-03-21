@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/********* Open Sans Regular Font Family *********/
+
+@font-face {
+    font-family: 'DroidSerif';
+    src: url('fonts/DroidSerif.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif.woff') format('woff'), url('fonts/DroidSerif.ttf') format('truetype'), url('fonts/DroidSerif.svg#DroidSerif') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSerif';
+    src: url('fonts/DroidSerif-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif-Italic.woff') format('woff'), url('fonts/DroidSerif-Italic.ttf') format('truetype'), url('fonts/DroidSerif-Italic.svg#DroidSerif-Italic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DroidSerif';
+    src: url('fonts/DroidSerif-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif-Bold.woff') format('woff'), url('fonts/DroidSerif-Bold.ttf') format('truetype'), url('fonts/DroidSerif-Bold.svg#DroidSerif-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DroidSerif';
+    src: url('fonts/DroidSerif-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif-BoldItalic.woff') format('woff'), url('fonts/DroidSerif-BoldItalic.ttf') format('truetype'), url('fonts/DroidSerif-BoldItalic.svg#DroidSerif-BoldItalic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* default style */
+
+html, body {
+    background-color: #fff;
+    height: 100%;
+}
+
+html, body, button, input, select, textarea {
+    color: #393939;
+    font-family: 'DroidSerif';
+    font-size: 14px;
+    line-height: 22px;
+}
+
+a {
+    text-decoration: none;
+    color: #545454;
+}
+
+a:focus {
+    outline: 0 none;
+}
+
+a:hover, a:active {
+    outline: 0;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #545454;
+}
+
+
+/* header style */
+
+header {
+    background-color: #119caf;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+}
+
+header a:hover {
+    color: #ffffff;
+}
+
+#header-top {
+    background-color: #098799;
+}
+
+#header-nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#header-nav .user-details {
+    margin-top: 15px;
+}
+
+#header-nav .user-details ul>li {
+    padding: 5px;
+}
+
+#header-nav .user-details .user-avatar {
+    margin-right: 10px;
+    border: solid 2px #fff;
+}
+
+#header-nav .user-details ul>li:last-child {
+    padding: 0px 5px 0px 20px;
+}
+
+#header-nav .user-details a.nav-icon {
+    background-color: #43d1e7;
+    padding: 5px 9px 5px 9px;
+    border-radius: 50%;
+}
+
+#header-nav .user-details a.nav-icon .badge {
+    position: absolute;
+    top: -4px;
+    background-color: #f15820;
+    /*right: -4px;*/
+}
+
+#header-nav .user-details .fa-caret-down {
+    color: #43d1e7;
+    padding-left: 8px;
+}
+
+#header-bottom {
+    background-color: #153c84;
+}
+
+
+/* sidebar style */
+
+#sidebar {
+    background-color: #0c1c3c;
+}
+
+
+/* page-content style */
+
+#page-content {
+
+}
+
+.user-auth-form {
+    margin-top: 15%;
+}
+
+/* footer style */
+
+footer {
+    background-color: #f6f5f5;
+}

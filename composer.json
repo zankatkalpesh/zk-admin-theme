@@ -1,0 +1,30 @@
+{
+  "name": "zankatkalpesh/zk-admin-theme",
+  "description": "CakePHP 3.x Admin Theme.",
+  "type": "cakephp-plugin",
+  "keywords": ["cakephp", "templates", "plugin"],
+  "homepage": "https://github.com/zankatkalpesh/zk-admin-theme",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Zankat Kalpesh",
+      "email": "zkdeveloeper24@gmail.com",
+      "homepage": "https://github.com/zankatkalpesh",
+      "role": "Author"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.16",
+    "cakephp/cakephp": "~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ZkAdminTheme\\": "src"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/zankatkalpesh/zk-admin-theme/issues",
+    "source": "https://github.com/zankatkalpesh/zk-admin-theme"
+  }
+}
+
