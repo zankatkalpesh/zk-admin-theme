@@ -2,34 +2,6 @@
 
 /********* Open Sans Regular Font Family *********/
 
-@font-face {
-    font-family: 'DroidSerif';
-    src: url('fonts/DroidSerif.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif.woff') format('woff'), url('fonts/DroidSerif.ttf') format('truetype'), url('fonts/DroidSerif.svg#DroidSerif') format('svg');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'DroidSerif';
-    src: url('fonts/DroidSerif-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif-Italic.woff') format('woff'), url('fonts/DroidSerif-Italic.ttf') format('truetype'), url('fonts/DroidSerif-Italic.svg#DroidSerif-Italic') format('svg');
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'DroidSerif';
-    src: url('fonts/DroidSerif-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif-Bold.woff') format('woff'), url('fonts/DroidSerif-Bold.ttf') format('truetype'), url('fonts/DroidSerif-Bold.svg#DroidSerif-Bold') format('svg');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'DroidSerif';
-    src: url('fonts/DroidSerif-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/DroidSerif-BoldItalic.woff') format('woff'), url('fonts/DroidSerif-BoldItalic.ttf') format('truetype'), url('fonts/DroidSerif-BoldItalic.svg#DroidSerif-BoldItalic') format('svg');
-    font-weight: 700;
-    font-style: italic;
-}
-
 
 /* default style */
 
@@ -40,7 +12,6 @@ html, body {
 
 html, body, button, input, select, textarea {
     color: #393939;
-    font-family: 'DroidSerif';
     font-size: 14px;
     line-height: 22px;
 }
@@ -136,15 +107,80 @@ header a:hover {
 }
 
 
+/* make sidebar nav vertical */
+
+#sidebar .navbar {
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+
+#sidebar .navbar .nav {
+    margin-top: 0px;
+}
+
+#sidebar .navbar li>a {
+    border-bottom: 1px solid #848484;
+}
+
+#sidebar .navbar li a {
+    color: #ffffff;
+}
+
+#sidebar .navbar .dropdown-menu {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#sidebar .nav li>a:focus, #sidebar .nav li>a:hover, #sidebar .nav li.active>a {
+    background-color: #2f559e;
+}
+
+#sidebar .nav .open>a, #sidebar .nav .open>a:focus, #sidebar .nav .open>a:hover {
+    background-color: #2f559e;
+}
+
+@media (min-width: 768px) {
+    #sidebar .navbar {
+        border-width: 0px;
+        margin-bottom: 20px;
+    }
+    #sidebar .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+    }
+    #sidebar .navbar ul {
+        float: none;
+    }
+    #sidebar .navbar li {
+        float: none;
+        display: block;
+    }
+    #sidebar .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        color: #ffffff;
+    }
+    #sidebar .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+
 /* page-content style */
 
-#page-content {
-
-}
+#page-content {}
 
 .user-auth-form {
     margin-top: 15%;
 }
+
 
 /* footer style */
 

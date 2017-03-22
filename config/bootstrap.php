@@ -9,4 +9,6 @@ Configure::write('ZkAdminTheme', [
         'templates' => Configure::read('App.paths.templates.0'),
     ],
     'rightSidebar' => false,
+    'defaultStyle' => '',
+    'defaultScript' => '',
 ]);

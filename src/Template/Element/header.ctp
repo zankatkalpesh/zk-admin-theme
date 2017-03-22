@@ -13,7 +13,7 @@
 		<div id="header-nav" class="row">
 			<div class="col-md-4">
 				<div class="site-logo">
-					<?=$this->Html->Link($this->Html->image($zkTheme['logo'], ['alt' => __('Logo'), 'class' => 'img-responsive']), ['controller' => 'Dashboard', 'action' => 'index'], ['escape' => false, 'title' => __('Zk Admin Theme')]);?>
+					<?=$this->Html->Link($this->Html->image($zkTheme['logo'], ['alt' => __('Logo'), 'class' => 'img-responsive']), 'javascript:void(0);', ['escape' => false, 'title' => __('Zk Admin Theme')]);?>
 				</div>
 			</div>
 			<div class="col-md-4 col-md-offset-4">

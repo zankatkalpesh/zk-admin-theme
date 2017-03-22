@@ -11,6 +11,29 @@
     <?=$this->Html->css(['ZkAdminTheme.bootstrap/css/bootstrap.min', 'ZkAdminTheme.font-awesome/css/font-awesome.min'])?>
     <?=$this->Html->css('ZkAdminTheme.style')?>
     <?=$this->Html->script('ZkAdminTheme.jquery-min')?>
+    <?php
+    if (!empty($zkTheme['defaultStyle'])) {
+        $zkTheme['defaultStyle'] = (is_array($zkTheme['defaultStyle'])) ? $zkTheme['defaultStyle'] : [$zkTheme['defaultStyle']];
+        //pr($zkTheme['defaultStyle']);exit;
+        foreach ($zkTheme['defaultStyle'] as $zkStyle) {
+            $zkStyle             = (is_array($zkStyle)) ? $zkStyle : [$zkStyle];
+            $zkStyle[1]['block'] = (!empty($zkStyle[1]['block'])) ? $zkStyle[1]['block'] : 'css';
+            if (isset($zkStyle[0]) && isset($zkStyle[1])) {
+                $this->Html->css($zkStyle[0], $zkStyle[1]);
+            }
+        }
+    }
+    if (!empty($zkTheme['defaultScript'])) {
+        $zkTheme['defaultScript'] = (is_array($zkTheme['defaultScript'])) ? $zkTheme['defaultScript'] : [$zkTheme['defaultScript']];
+        foreach ($zkTheme['defaultScript'] as $zkScript) {
+            $zkScript             = (is_array($zkScript)) ? $zkScript : [$zkScript];
+            $zkScript[1]['block'] = (!empty($zkScript[1]['block'])) ? $zkScript[1]['block'] : 'script';
+            if (isset($zkScript[0]) && isset($zkScript[1])) {
+                $this->Html->script($zkScript[0], $zkScript[1]);
+            }
+        }
+    }
+    ?>
     <?=$this->fetch('css')?>
     <?=$this->fetch('css_top')?>
     <?=$this->fetch('script')?>

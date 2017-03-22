@@ -1,7 +1,22 @@
-//Loads the correct sidebar on window load,
-//collapses the sidebar on window resize.
-//Sets the min-height of #page-wrapper to window size
 $(function() {
+    $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+        // Avoid following the href location when clicking
+        event.preventDefault(); 
+        // Avoid having the menu to close when clicking
+        event.stopPropagation(); 
+        // If a menu is already open we close it
+        // opening the one you clicked on
+        if($(this).attr('aria-expanded') == "true" || $(this).parent().hasClass('open')){
+            $(this).attr('aria-expanded',false);
+            $(this).parent().removeClass('open');    
+        } else {
+            $(this).attr('aria-expanded',true);
+            $(this).parent().addClass('open');
+        }
+    });
+    //Loads the correct sidebar on window load,
+    //collapses the sidebar on window resize.
+    //Sets the min-height of #page-wrapper to window size
     $(window).bind("load resize", function() {
         if ($('body').hasClass('body')) {
             $('#page-wrapper>div>#sidebar').css("min-height", "");
